@@ -1,0 +1,93 @@
+/* HEADER STYLES */
+
+#header-bar {
+  background-color: $ice-white;
+  color: $dark-grey;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  border-bottom: 3px solid $create-teal;
+  position: fixed;
+	z-index:1000;
+	top: 0;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+
+  .logo {
+    font-family: "Code";
+    font-size: 30pt;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    img {
+      width: 40px;
+      height: auto;
+      margin-top: -10px;
+      margin-right: 10px;
+    }
+  }
+
+  #nav {
+    list-style: none;
+    align-self: flex-end;
+    display:inline-flex;
+    align-items: stretch;
+    height: 100%;
+    margin: 0;
+		transition: right .2s ease-in-out;
+    li {
+      height: 100%;
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: $ice-white;
+        color: $create-teal;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        text-decoration: none;
+        transition: all 0.1s ease-in-out;
+        text-transform: uppercase;
+        &:hover {
+          color: $ice-white;
+          background-color: $create-teal;
+        }
+				@media screen and (max-width: 880px) {
+					display: block;
+					width: 100%;
+					color:$ice-white;
+					background-color: $create-shade;
+				}
+      }
+			@media screen and (max-width: 880px) {
+				height: 60px;
+				width: 100%;
+				line-height: 40px;
+			}
+    }
+		@media screen and (max-width: 880px) {
+			display:block;
+			position:fixed;
+			top:0;
+			padding: 0;
+			height: 100%;
+			background-color: $create-shade;
+			right:-150px;
+		}
+  }
+	.nav-toggle {
+		display:none;
+		height: 100%;
+		line-height: 30px;
+		padding: 20px;
+		@media screen and (max-width: 880px) {
+			display: block;
+		}
+	}
+}

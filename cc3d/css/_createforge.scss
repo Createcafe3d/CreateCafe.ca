@@ -1,0 +1,225 @@
+#createforge {
+  .cfheader {
+    background-color: $black;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/headphone_stands.jpg');
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+    height: 580px;
+    overflow: hidden;
+    img {
+      width: 120px;
+      height: auto;
+      position: relative;
+      left: 50%;
+      margin-left: -60px;
+    }
+    h1 {
+      color: $ice-white;
+      font-size: 56pt;
+      font-weight: 400;
+      b {
+        color: $forge-blue;
+      }
+    }
+    h2 {
+      color: $ice-white;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 32pt;
+      font-family: "Code";
+    }
+    h3 {
+      color:$ice-white;
+      text-align: center;
+      font-weight: 200;
+    }
+  }
+  .dark {
+    background: linear-gradient( rgba(20, 20, 20, 1), rgba(0, 0, 0, 1) ), $black;
+    color: $ice-white;
+    font-size: 16pt;
+    text-align: center;
+    border-top: 3px solid $forge-blue;
+    font-weight: 200;
+    div.content {
+      width: 50%;
+      margin: auto;
+      min-width: 500px;
+    }
+    div.video {
+      padding: 50px;
+      video {
+        max-width: 100%;
+        height: 500px;
+        box-shadow: 0px 0px 50px 0px rgba($forge-blue, 0.3);
+      }
+    }
+    .logo {
+      display:flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+      img {
+        height: 40px;
+        width: auto;
+        border-radius: 0;
+        margin: 0 15px 0 0;
+      }
+      h2 {
+        font-family: "Code";
+        font-weight: 300;
+        font-size: 32pt;
+        b {
+          color: $forge-blue;
+        }
+      }
+    }
+    a.button {
+      background-color: rgba($forge-blue, 0);
+      border: 2px solid $ice-white;
+      transition: all 0.2s ease-in-out;
+      color: $light-grey;
+      margin: 50px;
+      &:hover {
+        background-color: rgba($forge-blue, 0.2);
+        color: $ice-white;
+      }
+    }
+  }
+  .section {
+    margin:0;
+    padding: 50px;
+    h1 {
+      b {
+        color: $forge-blue;
+      }
+    }
+  }
+  #about-us {
+    div {
+      h2 {
+       b {
+         color: $forge-blue;
+       }
+      }
+      img {
+        border: 3px solid $forge-blue;
+      }
+    }
+  }
+  .cfcards {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    z-index: 5;
+    div.card {
+      width: 33.333%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: none;
+      @media screen and (max-width: 880px) {
+        height: 500px;
+      }
+      img {
+        height: 300px;
+        width: auto;
+        margin: auto;
+        display: block;
+        filter: brightness(1);
+        transition: filter 0.2s ease-in-out;
+      }
+      h2 {
+          text-align: center;
+          margin-top: 30px;
+          color: $black;
+          transition: color 0.2s ease-in-out;
+      }
+      div.slide {
+        position: absolute;
+        z-index: 1;
+        top: 100%; left: 0;
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0,0,0,0.9);
+        color: $ice-white;
+        padding: 20px;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        @media screen and (max-width: 880px) {
+          height: 500px;
+        }
+        div {
+          padding: 20px;
+          @media screen and (max-width: 880px) {
+        		font-size: 11pt;
+            padding: 5px;
+        	}
+        }
+        h2 {
+          color: $forge-blue;
+          @media screen and (max-width: 880px) {
+        		display:none;
+        	}
+        }
+        a.button {
+          width: auto;
+  				display: block;
+  				margin: auto;
+          margin-top: 50px;
+          background-color: rgba($forge-blue, 0);
+          box-shadow: none;
+          border: 2px solid $ice-white;
+          text-align: center;
+          color: $ice-white;
+          font-weight: 200;
+          font-size: 16pt;
+          text-transform: uppercase;
+          padding: 10px;
+          transition: all 0.2s ease-in-out;
+          color: $light-grey;
+          &:hover {
+            background-color: rgba($forge-blue, 0.2);
+            color: $ice-white;
+          }
+  			}
+      }
+      &:hover {
+        div.slide {
+          top: 0;
+          opacity:1;
+        }
+        &::after {
+          color: $ice-white;
+        }
+        h2 {
+          color: $ice-white;
+        }
+        img {
+          filter: brightness(0.8);
+        }
+      }
+      &::after {
+        display: block;
+        content:'\f077';
+        position: absolute;
+        font-family: "FontAwesome";
+        bottom: 10px;
+        width: 50px;
+        text-align: center;
+        left: 50%;
+        margin-left:-25px;
+        color: $forge-blue;
+        transition: color 0.2s ease-in-out;
+      }
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+}

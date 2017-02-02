@@ -1,0 +1,32 @@
+@import 'constants';
+@import 'header';
+@import 'footer';
+
+/* FONTS */
+@font-face {
+	font-family: 'Code';
+	src: url('./fonts/Code-Bold.eot');
+	src: local('Code Bold'), local('Code-Bold'),
+		url('./fonts/Code-Bold.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/Code-Bold.woff') format('woff'),
+		url('./fonts/Code-Bold.ttf') format('truetype'),
+		url('http://createcafe.ca/fonts/Code-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code';
+	src: url('./fonts/Code-Light.eot');
+	src: local('Code Light'), local('Code-Light'),
+		url('./fonts/Code-Light.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/Code-Light.woff') format('woff'),
+		url('./fonts/Code-Light.ttf') format('truetype'),
+		url('http://createcafe.ca/fonts/Code-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+#content {
+  min-height: 650px;
+}

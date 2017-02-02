@@ -1,0 +1,230 @@
+/* import styles */
+@import 'constants';
+@import 'header';
+@import 'banner';
+@import 'homepage_sliders';
+@import 'createforge';
+@import 'footer';
+@import 'team';
+
+/* FONTS */
+@font-face {
+	font-family: 'Code';
+	src: url('./fonts/Code-Bold.eot');
+	src: local('Code Bold'), local('Code-Bold'),
+		url('./fonts/Code-Bold.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/Code-Bold.woff') format('woff'),
+		url('./fonts/Code-Bold.ttf') format('truetype'),
+		url('http://createcafe.ca/fonts/Code-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code';
+	src: url('./fonts/Code-Light.eot');
+	src: local('Code Light'), local('Code-Light'),
+		url('./fonts/Code-Light.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/Code-Light.woff') format('woff'),
+		url('./fonts/Code-Light.ttf') format('truetype'),
+		url('http://createcafe.ca/fonts/Code-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+
+/* ELEMENT STYLES */
+
+body, html {
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+	min-width: 640px;
+	overflow-x: hidden;
+	@media screen and (max-width: 880px) {
+		zoom: 1.1;
+	}
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	&:link {
+		color: $create-teal;
+	}
+	&:visited, &:active {
+		color: $create-shade;
+	}
+	&:hover {
+		color:$create-shade;
+		text-decoration: underline;
+	}
+}
+
+/* GLOBAL CLASSES */
+
+.card {
+	box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.3);
+}
+
+a.button {
+	display:inline-block;
+	background-color: #23b0af;
+	color: #ffffff;
+	border: 0;
+	padding: 15px;
+	margin: 10px 0;
+	text-decoration: none;
+	font-size: 20pt;
+	transition: background-color 0.1s ease-in-out;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.6);
+	&:hover {
+		background-color: #308483;
+	}
+}
+
+/* BODY SECTION STYLES */
+.content-wrapper {
+  margin-top: 70px;
+}
+
+.section {
+	margin: 50px 0 100px 0;
+  h1 {
+    font-family: "Code";
+    font-weight: 800;
+    text-align: center;
+    font-size: 32pt;
+    b {
+      color: $create-teal;
+    }
+  }
+	.textblock {
+		width: 65%;
+		margin: auto;
+		font-size: 16pt;
+		span {
+			display: block;
+			font-weight: 200;
+		}
+		a.button {
+			display: block;
+			width: 200px;
+			margin: 20px auto;
+			text-align: center;
+		}
+	}
+}
+
+.grey-bg {
+	background-color: $very-light-grey;
+	padding: 10px;
+}
+
+
+.social_media {
+	background-color: $very-light-grey;
+	padding-top: 20px;
+	width: 100%;
+	text-align: center;
+	h2 {
+		font-weight: 200;
+		i {
+			color: $create-teal;
+		}
+	}
+	#instafeed {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-start;
+		.ig_post {
+			margin: 10px;
+			width: 300px;
+			border-radius: 10px;
+			img {
+				width: 300px;
+				height: 300px;
+				border-radius: 10px;
+				box-shadow: 0px 3px 3px 0px rgba($create-shade,0.5);
+			}
+			span {
+				padding: 10px;
+				font-weight: 200;
+				display: block;
+				text-align: left;
+				span {
+					padding: 5px 0;
+					font-weight: 400;
+					font-size: 12pt;
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	.social_icons {
+		margin-bottom: 60px;
+		a {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			opacity: 0.9;
+			width: 180px;
+			margin: 20px auto;
+			padding-right: 20px;
+			span {
+					font-size: 16pt;
+					margin-left: 20px;
+			}
+			&:hover {
+				text-decoration: none;
+				opacity: 1;
+			}
+		}
+		a.facebook {
+			color: #3b5998;
+		}
+		a.twitter {
+			color: #00aced;
+		}
+		a.instagram {
+			color: #bc2a8d;
+		}
+	}
+}
+
+/* CONTACT */
+.contact-section {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	div {
+		margin: 30px;
+	}
+	.form {
+		min-width:600px;
+	}
+	.mid {
+		min-width: 600px;
+		text-align: center;
+		iframe {
+			border: 2px solid $create-teal;
+			width: 600px;
+			height: 450px;
+			margin: auto;
+			background-color: $light-grey;
+		}
+		.phone, .email {
+			color: $dark-grey;
+			font-size: 28pt;
+		}
+	}
+}

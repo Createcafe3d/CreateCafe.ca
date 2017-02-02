@@ -1,0 +1,169 @@
+.homepage-slides {
+  .slides {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    .slide {
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      margin: 20px;
+      background-position: center center;
+      .image {
+        width: 400px;
+        height: 400px;
+        background-size: cover;
+      }
+      .text {
+        position: absolute;
+        top: 0;
+        color: $ice-white;
+        background-color: rgba($create-shade, 0.1);
+        width: 400px;
+        height: 400px;
+        padding: 320px 0 0 0;
+        transition: all 0.3s ease-in-out;
+        h2 {
+          color: $ice-white;
+          text-transform: uppercase;
+          margin: 0;
+          background-color: $create-shade;
+          padding: 10px 10px 0 10px;
+        }
+        h3 {
+          color: $ice-white;
+          margin: 0 0 10px 0;
+          font-weight: 200;
+          background-color: $create-shade;
+          padding: 10px;
+          &:after {
+            display: block;
+            content:'\f077';
+            position: absolute;
+            font-family: "FontAwesome";
+            bottom: 20px;
+            right: 20px;
+            color: rgba(0,0,0,0.4);
+            font-size: 36px;
+            font-weight: 400;
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        .socicons {
+          display:flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: space-between;
+          width: 50%;
+          margin: auto;
+          a {
+            color: $light-grey;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              color: $ice-white;
+            }
+          }
+        }
+        span {
+          h4 {
+            margin: 0 0 20px 0;
+            span {
+              font-weight: 200;
+              font-size: 12pt;
+              margin: 0;
+              padding: 0;
+            }
+          }
+          a.button {
+            display: block;
+            padding: 10px;
+            background-color: rgba($ice-white,0);
+            color: $ice-white;
+            text-align: center;
+            border: 2px solid $ice-white;
+            font-size: 14pt;
+            width: 200px;
+            min-width: 200px;
+            margin: 10px auto;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            box-shadow: none;
+            &:hover {
+              background-color: rgba($ice-white,1);
+              color: $create-shade;
+            }
+          }
+          padding: 10px;
+          display: block;
+          font-size: 16pt;
+          font-weight: 200;
+        }
+        &:hover {
+          padding-top: 10px;
+          background-color: rgba($create-shade, 0.9);
+          h2, h3 {
+            transition: background-color 0.3s ease-in-out;
+            background-color: rgba($create-shade, 0);
+          }
+          h3 {
+            &:after {
+              transform: scaleY(-1);
+              bottom: 340px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dark {
+    .slide {
+      .text {
+        background-color: rgba($dark-grey, 0.1);
+        h2 {
+          background-color: $dark-grey;
+        }
+        h3 {
+          background-color: $dark-grey;
+        }
+        span {
+          a.button {
+            width: 300px;
+            &:hover {
+              color: $dark-grey;
+            }
+          }
+        }
+        &:hover {
+          background-color: rgba($dark-grey, 0.9);
+          h2, h3 {
+            background-color: rgba($dark-grey, 0);
+          }
+        }
+      }
+    }
+  }
+  .wide {
+    .slide {
+      width: 33.3%;
+      height: 400px;
+      margin: 0;
+      .image {
+        background-size: cover;
+        width: 100%;
+      }
+      .text {
+        width: 100%;
+        height: 400px;
+        h2 {
+          font-family: 'Code';
+          font-weight: 300;
+          padding: 11px 10px 1px 10px;
+        }
+      }
+    }
+  }
+}
