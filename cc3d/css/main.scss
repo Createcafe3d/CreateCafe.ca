@@ -124,6 +124,7 @@ a.button {
 	.hours {
 		text-align: center;
 		margin: 20px auto;
+		width: 80%;
 		h2 {
 			font-size: 20pt;
 			margin: 5px;
@@ -152,7 +153,8 @@ a.button {
 			tbody {
 				tr {
 					td {
-						font-size: 14pt;
+						font-size: 12pt;
+						padding: 5px;
 					}
 					td.today {
 						background-color: $create-teal;

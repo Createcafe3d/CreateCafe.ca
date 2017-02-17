@@ -584,7 +584,8 @@ a.button {
       text-align: center; }
   .section .hours {
     text-align: center;
-    margin: 20px auto; }
+    margin: 20px auto;
+    width: 80%; }
     .section .hours h2 {
       font-size: 20pt;
       margin: 5px;
@@ -605,7 +606,8 @@ a.button {
         font-weight: 800;
         border: 5px solid #23b0af; }
       .section .hours table tbody tr td {
-        font-size: 14pt; }
+        font-size: 12pt;
+        padding: 5px; }
       .section .hours table tbody tr td.today {
         background-color: #23b0af;
         color: #ffffff;
