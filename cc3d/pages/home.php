@@ -14,6 +14,99 @@
 <div class="section">
 
 <h1>On <b>Location</b></h1>
+<div class="textblock hours">
+  <h2>Hours</h2>
+  <table id="hours-table">
+    <thead>
+      <tr>
+        <th>
+          &nbsp;
+        </th>
+        <th>
+          SUN
+        </th>
+        <th>
+          MON
+        </th>
+        <th>
+          TUE
+        </th>
+        <th>
+          WED
+        </th>
+        <th>
+          THU
+        </th>
+        <th>
+          FRI
+        </th>
+        <th>
+          SAT
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Open
+        </td>
+        <td>
+          12:00 AM
+        </td>
+        <td>
+          10:00 AM
+        </td>
+        <td>
+          10:00 AM
+        </td>
+        <td>
+          10:00 AM
+        </td>
+        <td>
+          10:00 AM
+        </td>
+        <td>
+          10:00 AM
+        </td>
+        <td>
+          12:00 AM
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Close
+        </td>
+        <td>
+          6:00 PM
+        </td>
+        <td>
+          8:00 PM
+        </td>
+        <td>
+          8:00 PM
+        </td>
+        <td>
+          8:00 PM
+        </td>
+        <td>
+          8:00 PM
+        </td>
+        <td>
+          8:00 PM
+        </td>
+        <td>
+          6:00 PM
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script type="text/javascript">
+    var today = new Date().getDay();
+    $("#hours-table tr th:nth-child(" + (today + 2) + ")").addClass("today");
+    $("#hours-table tr td:nth-child(" + (today + 2) + ")").addClass("today");
+  </script>
+</div>
+<br />
 <div class="textblock"><center>
   Stop by our caf&eacute; in person for these following services:
 </center><br /><br /></div>

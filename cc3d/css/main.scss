@@ -120,6 +120,75 @@ a.button {
 			text-align: center;
 		}
 	}
+	/* Hours Table */
+	.hours {
+		text-align: center;
+		margin: 20px auto;
+		h2 {
+			font-size: 20pt;
+			margin: 5px;
+			text-transform: uppercase;
+			color: $create-teal;
+		}
+		table {
+			width: 100%;
+			border-spacing: 0;
+			border: 2px solid $create-teal;
+			$shadow: 0px 3px 3px -2px rgba(0,0,0,0.25);
+			thead {
+				th {
+					color: $ice-white;
+					background-color: $create-teal;
+					text-transform: uppercase;
+					font-weight: 400;
+				}
+				th.today {
+					background-color: $create-teal;
+					color: $ice-white;
+					font-weight: 800;
+					border: 5px solid $create-teal;
+				}
+			}
+			tbody {
+				tr {
+					td {
+						font-size: 14pt;
+					}
+					td.today {
+						background-color: $create-teal;
+						color: $ice-white;
+						border: 5px solid $create-teal;
+					}
+					td:nth-child(odd) {
+						background-color: $very-light-grey;
+					}
+					td:first-child {
+						background-color: $ice-white;
+						color: $create-teal;
+						font-size: 12pt;
+						text-transform: uppercase;
+						text-align: right;
+						padding-right: 15px;
+						box-sizing: border-box;
+					}
+					td.today {
+						background-color: $create-teal;
+						color: $ice-white;
+						font-weight: 800;
+						border: 5px solid $create-teal;
+						box-shadow: 0 5px 5px -1px rgba(0,0,0,0.25);
+					}
+				}
+				tr:nth-child(1) {
+					td {box-shadow: inset $shadow;}
+					td.today {
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+
 }
 
 .grey-bg {
