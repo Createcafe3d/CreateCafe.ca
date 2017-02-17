@@ -17,5 +17,5 @@
 2. _(Optional)_ To compile SCSS to CSS:
   - open a seperate terminal/console window
   - enter the css directory
-  - run `sass --watch scss:css`
+  - run `sass --watch .:.`
 3. Go to [http://localhost:8989](http://localhost:8989) in your browser
