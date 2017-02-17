@@ -61,7 +61,7 @@
 <div>
   <img src="images/staff/leejay_schmidt.jpg" alt="Leejay Schmidt" />
   <h2>Leejay <b>Schmidt</b></h2>
-  <h3>Software Engineer</h3>
+  <h3>Software Design</h3>
   <div>
     Leejay is a the newest addition to the CreateCafe team. His experience in app development will be utilized to automate print systems and create print queues for organizational efficiency. Leejay is currently involved with a few start ups in Saskatoon and wants to get down to Silicon Calley ASAP; we are happy to be a stepping stone in that direction!
   </div>
