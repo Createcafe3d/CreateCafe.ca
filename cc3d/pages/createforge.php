@@ -44,7 +44,7 @@
       <div class="slide">
         <h2>Wholesale Purchases</h2>
         <div>
-         Our team will ensure that you get the product edge for your shop with function &amp; quality. Using our experience in design and manufacturing we are able to create any product that you may wish to bring into your store even outside of what we offer on our site.  
+         Our team will ensure that you get the product edge for your shop with function &amp; quality. Using our experience in design and manufacturing we are able to create any product that you may wish to bring into your store even outside of what we offer on our site.
           <br /><br /><a class="button" href="mailto:createforge@createcafe.ca" target="_blank">Contact CreateForge</a>
         </div>
       </div>
@@ -71,10 +71,5 @@
     </div>
 
   </div>
-<div class="section">
-  <h1>Contact <b>Us</b></h1>
-  <script type="text/javascript" src="https://form.jotform.com/jsform/63388804799274"></script>
-
-</div>
 
 </div>
