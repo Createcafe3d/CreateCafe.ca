@@ -51,7 +51,10 @@
           Open
         </td>
         <td>
-          Closed
+          10:00 AM
+        </td>
+        <td>
+          By Appointment
         </td>
         <td>
           10:00 AM
@@ -67,9 +70,6 @@
         </td>
         <td>
           10:00 AM
-        </td>
-        <td>
-          10:00 PM
         </td>
       </tr>
       <tr>
@@ -77,10 +77,10 @@
           Close
         </td>
         <td>
-          Closed
+          8:00 PM
         </td>
         <td>
-          8:00 PM
+          By Appointment
         </td>
         <td>
           8:00 PM
