@@ -51,7 +51,7 @@
           Open
         </td>
         <td>
-          12:00 PM
+          Closed
         </td>
         <td>
           10:00 AM
@@ -69,7 +69,7 @@
           10:00 AM
         </td>
         <td>
-          12:00 PM
+          10:00 PM
         </td>
       </tr>
       <tr>
@@ -77,7 +77,7 @@
           Close
         </td>
         <td>
-          6:00 PM
+          Closed
         </td>
         <td>
           8:00 PM
@@ -95,7 +95,7 @@
           8:00 PM
         </td>
         <td>
-          6:00 PM
+          8:00 PM
         </td>
       </tr>
     </tbody>
