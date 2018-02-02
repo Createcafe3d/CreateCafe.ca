@@ -1,0 +1,16 @@
+<mat-table [dataSource]="hours">
+
+  <ng-container *ngFor="let column of displayedColumns">
+    <ng-container [matColumnDef]="column">
+      <mat-header-cell *matHeaderCellDef [ngClass]="{'today': isToday(column)}">
+        {{ displayDay[column] }}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element: HooRow" [ngClass]="{'today': isToday(column)}">
+        {{ element[column] }}
+      </mat-cell>
+    </ng-container>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

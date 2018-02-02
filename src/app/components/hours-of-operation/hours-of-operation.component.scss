@@ -1,0 +1,44 @@
+@import './../../common/partials/colors';
+
+mat-table {
+  background-color: $white;
+  mat-header-row {
+    background-color: $primary-color;
+    mat-header-cell {
+      color: $white;
+      text-align: center;
+      &.today {
+        font-weight: 700;
+        font-size: 16pt;
+      }
+      &:first-child {
+        flex-grow: 0.5;
+        text-overflow: ellipsis;
+        overflow-wrap: normal;
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+  mat-row {
+    mat-cell {
+      text-align: center;
+      &.today {
+        color: $primary-color;
+        font-weight: 700;
+        font-size: 14pt;
+      }
+      &:first-child {
+        color: $primary-color;
+        text-align: right;
+        flex-grow: 0.5;
+        text-overflow: ellipsis;
+        overflow-wrap: normal;
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
