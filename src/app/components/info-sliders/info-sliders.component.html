@@ -1,0 +1,27 @@
+<div class="intro-sliders">
+  <div *ngFor="let section of sections" class="section"
+    [ngClass]="{
+      'expanded': isExpanded(section.state),
+      'collapsed': isCollapsed(section.state)
+    }"
+    [ngStyle]="{
+      'background-image': 'url(\'' + section.imageUrl + '\')'
+    }"
+    (click)="isExpanded(section.state) ? expandSection(section.id) : return">
+    <div class="title"
+      (click)="toggleExpand(section)"
+      >{{ section.title }}</div>
+    <div class="content">
+      <div class="text">
+        {{ section.text }}
+      </div>
+      <div class="button">
+        <button mat-raised-button 
+          *ngFor="let button of section.buttons"
+          (click)="button.action()">
+          {{ button.text }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

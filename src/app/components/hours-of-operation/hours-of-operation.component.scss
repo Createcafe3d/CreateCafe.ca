@@ -7,6 +7,8 @@ mat-table {
     mat-header-cell {
       color: $white;
       text-align: center;
+      overflow: visible;
+      white-space: nowrap;
       &.today {
         font-weight: 700;
         font-size: 16pt;

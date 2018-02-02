@@ -1,0 +1,97 @@
+@import './../../common/partials/colors';
+
+.intro-sliders {
+  display: flex;
+  flex-flow: row nowrap;
+  .section {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: $dark-grey;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 400px;
+    transition: width 0.4s ease-in-out,
+      flex-grow 0.4s ease-in-out,
+      flex-shrink 0.4s ease-in-out,
+      height 0.4s ease-in-out,
+      background-size 0.4s ease-in-out;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    width: 25%;
+    .title {
+      color: $white;
+      font-size: 22pt;
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: transform 0.4s ease-in-out;
+      white-space: nowrap;
+      font-family: "Code Pro Bold", sans-serif;
+      text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.9);
+      text-transform: uppercase;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .content {
+      .text {
+        color: $white;
+        margin: 15px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.9);
+        font-size: 20px;
+      }
+      height: auto;
+      transition: 
+        opacity 0.4s ease-in-out,
+        flex-grow 0.4s ease-in-out;
+      overflow: hidden;
+      height: 0;
+      opacity: 0;
+      flex-grow: 0;
+    }
+    .button {
+      text-align: center;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      button {
+        margin: 10px;
+      }
+    }
+    &.expanded {
+      flex-grow: 1;
+      flex-shrink: 0;
+      .content {
+        opacity: 1;
+        flex-grow: 1;
+      }
+    }
+    &.collapsed {
+      flex-grow: 0;
+      flex-shrink: 1;
+      width: 100px;
+      .title {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    flex-flow: column nowrap;
+    .section {
+      width: 100%;
+      height: 100px;
+      &.expanded {
+        height: 400px;
+      }
+      &.collapsed {
+        height: 100px;
+        width: 100%;
+        .title {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
