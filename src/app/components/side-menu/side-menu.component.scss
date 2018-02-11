@@ -49,11 +49,21 @@
               }
             }
           }
+          td {
+            padding-bottom: 5px;
+          }
           &.variant {
-            font-weight: 400;
             td {
-              padding-left: 50px;
+              padding-left: 30px;
             }
+          }
+        }
+      }
+      thead {
+        tr {
+          td {
+            font-size: 12px;
+            padding-bottom: 15px; 
           }
         }
       }
