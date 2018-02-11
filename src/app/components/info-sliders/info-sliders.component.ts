@@ -14,48 +14,58 @@ export class InfoSlidersComponent implements OnInit {
       {
         id: 0,
         title: 'Coffee',
-        text: 'Lorem ipsum dolor sit amet',
-        imageUrl: 'https://truffle-assets.imgix.net/pxqrocxwsjcc_3IxhdvBIPuwIeGmms8mKw4_Cookie-coulant_landscapeThumbnail_en.png',
+        text: 'Create Cafe serves a full line of teas & coffee by the cup, or grab 1 pound of beans roasted by Create Coffee.',
+        imageUrl: './assets/images/coffee.jpg',
         buttons: [
-          {text: 'Button', action: () => {}}
+          {text: 'Create Coffee', action: () => {
+            window.open('http://createcoffee.ca', '_blank');
+          }},
+          {text: 'Menu', action: () => {}}
         ],
-        state: State.NEUTRAL
+        state: State.NEUTRAL,
+        color: 'blue'
       },
       {
         id: 1,
         title: '3D Printing',
-        text: 'Lorem ipsum dolor sit amet',
-        imageUrl: 'https://truffle-assets.imgix.net/pxqrocxwsjcc_3IxhdvBIPuwIeGmms8mKw4_Cookie-coulant_landscapeThumbnail_en.png',
+        text: 'Create Cafe offers a complete line of professional services to take your idea from concept to in your hands.\
+           You can also 3D Print yourself in Create Cafe with a Print Pass for the day or become a monthly member.',
+        imageUrl: './assets/images/printing.jpg',
         buttons: [
-          {text: 'Button 1', action: () => {}},
-          {text: 'Button 2', action: () => {}}
+          {text: 'View Professional Services', action: () => {}},
+          {text: 'Printing Pass', action: () => {}}
         ],
-        state: State.NEUTRAL
+        state: State.NEUTRAL,
+        color: 'red'
       },
       {
         id: 2,
-        title: 'Classes and Events',
-        text: 'Lorem ipsum dolor sit amet',
-        imageUrl: 'https://truffle-assets.imgix.net/pxqrocxwsjcc_3IxhdvBIPuwIeGmms8mKw4_Cookie-coulant_landscapeThumbnail_en.png',
+        title: 'Classes & Events',
+        text: '3D Printing is limited only by one’s imagination. Create Cafe offers classes on 3D Printing, Designing,\
+           and Finishing Techniques to help make 3D Printing a part of your everyday life. View up coming classes and events below.',
+        imageUrl: './assets/images/classes.jpg',
         buttons: [
-          {text: 'Button', action: () => {}}
+          {text: 'Classes', action: () => {}}
         ],
-        state: State.NEUTRAL
+        state: State.NEUTRAL,
+        color: 'slate'
       },
       {
         id: 3,
         title: 'Online Shop',
-        text: 'Lorem ipsum dolor sit amet',
-        imageUrl: 'https://truffle-assets.imgix.net/pxqrocxwsjcc_3IxhdvBIPuwIeGmms8mKw4_Cookie-coulant_landscapeThumbnail_en.png',
+        text: 'Looking for a fun 3D Printing project? Our online shop has DIY Headphone kits for you.',
+        imageUrl: './assets/images/shop.jpg',
         buttons: [
-          {text: 'Button', action: () => {}}
+          {text: 'Shop', action: () => {}}
         ],
-        state: State.NEUTRAL
+        state: State.NEUTRAL,
+        color: 'green'
       }
     ];
   }
 
   expandSection(id: number): void {
+    console.log(id);
     this.sections.map(section => {
       section.state = section.id === id ? State.EXPANDED : State.COLLAPSED;
     });
@@ -89,6 +99,7 @@ export interface Section {
   imageUrl: string;
   buttons: Button[];
   state: State;
+  color: string;
 }
 
 export interface Button {

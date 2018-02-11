@@ -1,7 +1,7 @@
 @import './../../common/partials/colors';
 
 mat-table {
-  background-color: $white;
+  background-color: $super-dark-grey;
   mat-header-row {
     background-color: $primary-color;
     mat-header-cell {
@@ -26,6 +26,7 @@ mat-table {
   mat-row {
     mat-cell {
       text-align: center;
+      color: $med-grey;
       &.today {
         color: $primary-color;
         font-weight: 700;
