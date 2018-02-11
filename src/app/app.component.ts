@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MenuService } from './services/menu.service';
 
 @Component({
@@ -6,10 +6,11 @@ import { MenuService } from './services/menu.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  @ViewChild('sideMenu') private sideMenu;
   constructor(private menu: MenuService) {}
 
-  public get menuOpened(): boolean {
-    return this.menu.menuOpened;
+  ngOnInit(): void {
+    this.menu.sideMenu = this.sideMenu;
   }
 }

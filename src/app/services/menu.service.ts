@@ -1,12 +1,8 @@
+import { MatSidenav } from "@angular/material";
+
 export class MenuService {
-  menuOpen = false;
-  public get menuOpened(): boolean {
-    return this.menuOpen;
-  }
-  public set menuOpened(isOpen: boolean) {
-    this.menuOpen = isOpen;
-  }
+  public sideMenu: MatSidenav;
   public toggleMenu(): void {
-    this.menuOpen = !this.menuOpen;
+    this.sideMenu.toggle();
   }
 }

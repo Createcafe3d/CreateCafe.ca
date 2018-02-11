@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { MenuService } from '../../services/menu.service';
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'info-sliders',
