@@ -1,0 +1,41 @@
+@import './../../common/partials/colors';
+
+.professional-services {
+  margin: 10px;
+  mat-card-title {
+    margin-bottom: 2em;
+  }
+  mat-card-content {
+    margin: -24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    .ps-section {
+      display: flex;
+      flex-flow: column nowrap;
+      flex: 1 0;
+      min-width: 320px;
+      margin: 24px;
+      .title {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 1em;
+      }
+      .content {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+  }
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    button {
+      background-color: $primary-color-dark;
+      color: $white;
+    }
+  }
+}

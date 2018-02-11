@@ -1,0 +1,50 @@
+<ng-template #priceDisplay let-price="price">
+  <div class="price">
+    <span class="dollars">{{ price.dollars }}</span>
+    <span class="cents">{{ price.cents }}</span>
+  </div>
+</ng-template>
+
+<div class="side-menu">
+  <div class="menu-title">Menu</div>
+  <div class="menu">
+    <table class="menu-items">
+      <thead class="menu-header">
+        <tr>
+          <td class="title"></td>
+          <td class="reg-price">reg</td>
+          <td class="large-price">lrg</td>
+        </tr>
+      </thead>
+      <ng-container *ngFor="let menuItem of menuItems">
+        <tr class="menu-item">
+          <td class="title">{{ menuItem.title }}</td>
+          <td class="reg-price">
+            <ng-container 
+              [ngTemplateOutlet]="priceDisplay"
+              [ngTemplateOutletContext]="{price: getPrice(menuItem.regPrice)}">
+            </ng-container> 
+          </td>
+          <td class="large-price">
+            <ng-container 
+              *ngIf="menuItem.largePrice"
+              [ngTemplateOutlet]="priceDisplay"
+              [ngTemplateOutletContext]="{price: getPrice(menuItem.largePrice)}">
+            </ng-container> 
+          </td>
+        </tr>
+        <tr class="menu-item-variants" 
+          *ngIf="menuItem.variants && menuItem.variants.length > 0">
+          <ng-container *ngFor="let variant of menuItem.variants">
+            <tr class="variant">
+              <td>
+                {{ variant }}
+              </td>
+            </tr>
+          </ng-container>
+        </tr>
+      </ng-container>
+    </table>
+    <div class="subtext">Plus Applicable Taxes</div>
+  </div>
+</div>

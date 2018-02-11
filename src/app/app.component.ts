@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from './services/menu.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private menu: MenuService) {}
+
+  public get menuOpened(): boolean {
+    return this.menu.menuOpened;
+  }
 }

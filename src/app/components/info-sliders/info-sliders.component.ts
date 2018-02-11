@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'info-sliders',
@@ -8,6 +9,8 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class InfoSlidersComponent implements OnInit {
   private sections: Section[];
+
+  constructor(private menu: MenuService) {}
 
   ngOnInit(): void {
     this.sections = [
@@ -20,7 +23,7 @@ export class InfoSlidersComponent implements OnInit {
           {text: 'Create Coffee', action: () => {
             window.open('http://createcoffee.ca', '_blank');
           }},
-          {text: 'Menu', action: () => {}}
+          {text: 'Menu', action: () => this.menu.toggleMenu()}
         ],
         state: State.NEUTRAL,
         color: 'blue'
@@ -65,7 +68,6 @@ export class InfoSlidersComponent implements OnInit {
   }
 
   expandSection(id: number): void {
-    console.log(id);
     this.sections.map(section => {
       section.state = section.id === id ? State.EXPANDED : State.COLLAPSED;
     });

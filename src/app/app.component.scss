@@ -5,25 +5,33 @@
 @import 'common/partials/fonts';
 
 .page-wrapper {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    background-color: $light-grey;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: $light-grey;
 }
 
 a {
-    color: $primary-color-dark;
-    transition: color 0.1s ease-in-out;
-    text-decoration: none;
-    &:link, &:visited {
-        color: $primary-color-dark;
-        cursor: pointer;
-    }
-    &:hover, &:active {
-        color: $primary-color;
-    }
+  color: $primary-color-dark;
+  transition: color 0.1s ease-in-out;
+  text-decoration: none;
+  &:link, &:visited {
+      color: $primary-color-dark;
+      cursor: pointer;
+  }
+  &:hover, &:active {
+      color: $primary-color;
+  }
 }
 
 div {
   box-sizing: border-box;
+}
+
+mat-sidenav-container {
+  position: relative;
+  mat-sidenav {
+    position: fixed;
+    height: 100%;
+  }
 }

@@ -1,6 +1,14 @@
-<div class="page-wrapper">
-  <page-header></page-header>
-  <page-intro></page-intro>
-  <hours-of-operation></hours-of-operation>
-  <info-sliders></info-sliders>
-</div>
+<mat-sidenav-container>
+    <mat-sidenav mode="over" [opened]="menuOpened">
+      <side-menu></side-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="page-wrapper">
+          <page-header></page-header>
+          <page-intro></page-intro>
+          <hours-of-operation></hours-of-operation>
+          <info-sliders></info-sliders>
+          <professional-services></professional-services>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,69 @@
+@import './../../common/partials/colors';
+
+.side-menu {
+  min-width: 400px;
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: $primary-color-dark;
+  color: $white;
+  display: flex;
+  flex-flow: column nowrap;
+  .menu-title {
+    background-color: $white;
+    color: $primary-color-dark;
+    text-transform: uppercase;
+    font-size: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-top: 24px;
+    max-height: 90px;
+    line-height: 0.6;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .menu {
+    flex-grow: 1;
+    padding: 1em;
+    width: 100%;
+    overflow: scroll;
+    table.menu-items {
+      width: calc(100% - 2em);
+      thead, tbody {
+        tr {
+          font-weight: 700;
+          td.reg-price, td.large-price {
+            width: 50px;
+            text-align: right;
+            .price {
+              display: flex;
+              justify-content: flex-end;
+              .dollars {
+                font-size: 18px;
+              }
+              .cents {
+                position: relative;
+                top: 2px;
+                font-size: 12px;
+              }
+            }
+          }
+          &.variant {
+            font-weight: 400;
+            td {
+              padding-left: 50px;
+            }
+          }
+        }
+      }
+    }
+    .subtext {
+      text-align: center;
+      width: calc(100% - 2em);
+      margin: 2em 0;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+}
