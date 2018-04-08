@@ -1,9 +1,11 @@
 @import './../../common/partials/colors';
 
 .professional-services {
-  margin: 10px;
   mat-card-title {
     margin-bottom: 2em;
+    color: $primary-color-dark;
+    text-align: center;
+    font-weight: 200;
   }
   mat-card-content {
     margin: -24px;
@@ -15,7 +17,6 @@
       width: 100%;
       mat-expansion-panel {
         width: 100%;
-        max-width: calc(100% - 16px);
         margin: 0 auto;
         background-color: $super-dark-grey;
         color: $light-grey;

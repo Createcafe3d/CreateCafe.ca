@@ -1,4 +1,4 @@
-import { MatSidenav } from "@angular/material";
+import { MatSidenav } from '@angular/material';
 
 export class MenuService {
   public sideMenu: MatSidenav;

@@ -11,12 +11,14 @@ import { InfoSlidersComponent } from './components/info-sliders/info-sliders.com
 import { ProfessionalServicesComponent } from './components/professional-services/professional-services.component';
 import { MenuService } from './services/menu.service';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { ProductsComponent } from './components/products/products.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, PageHeaderComponent, PageIntroComponent, SideMenuComponent,
-    HoursOfOperationComponent, InfoSlidersComponent, ProfessionalServicesComponent
+    HoursOfOperationComponent, InfoSlidersComponent, ProfessionalServicesComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, MatTableModule, MatButtonModule,

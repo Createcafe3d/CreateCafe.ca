@@ -1,0 +1,30 @@
+@import './../../common/partials/colors';
+
+#products-section {
+  h1 {
+    font-size: 24px;
+    font-weight: 200;
+    color: $primary-color-dark;
+    margin: 24px auto;
+    text-align: center;
+  }
+  .options {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+    mat-card {
+      margin: 10px;
+      max-width: 500px;
+      width: 25%;
+      min-width: 300px;
+      mat-card-actions {
+        text-align: center;
+        button {
+          background-color: $primary-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
