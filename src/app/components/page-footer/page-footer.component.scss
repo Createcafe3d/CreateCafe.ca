@@ -1,0 +1,99 @@
+@import './../../common/partials/colors';
+
+.footer {
+  text-align: center;
+  .credit {
+    color: $dark-grey;
+    margin: 30px auto;
+    line-height: 1.5;
+  }
+  .social {
+    margin: 30px auto;
+    h2 {
+      color: $primary-color-dark;
+      font-weight: 200;
+    }
+    div {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        font-size: 20px;
+        transform: scale(1);
+        transition: transform 0.2s ease-in-out;
+        fa {
+          font-size: 28px;
+          margin-right: 10px;
+        }
+        &.facebook {
+          color: #3b5998;
+        }
+        &.twitter {
+          color: #00aced;
+        }
+        &.instagram {
+          color: #bc2a8d;
+        }
+        &:hover {
+          text-decoration: none;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  h2.instagram-feed-title {
+    color: #bc2a8d;
+    font-weight: 200;
+  }
+  .instagram {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    mat-card.post {
+      cursor: pointer;
+      width: 300px;
+      margin: 10px;
+      text-align: left;
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+      }
+      mat-card-header {
+        .mat-card-avatar {
+          border: 1px solid $grey;
+        }
+      }
+      .image {
+        height: 300px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      mat-card-content {
+        .date {
+          color: $dark-grey;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover, &:visited {
+    color: $primary-color-dark;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

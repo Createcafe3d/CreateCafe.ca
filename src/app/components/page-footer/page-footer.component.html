@@ -1,0 +1,30 @@
+<div class="footer">
+  <div class="social">
+    <h2>Follow us on social media</h2>
+    <div>
+      <a class="facebook" href="https://www.facebook.com/CreateCafe3D" target="_blank"><fa name="facebook"></fa><span>CreateCafe3D</span></a>
+      <a class="twitter" href="https://twitter.com/createcafe3d" target="_blank"><fa name="twitter"></fa><span>@createcafe3d</span></a>
+      <a class="instagram" href="https://www.instagram.com/createcafe3d/" _target="blank"><fa name="instagram"></fa><span>@createcafe3d</span></a>    
+    </div>
+  </div>
+  <h2 class="instagram-feed-title"><fa name="instagram"></fa> Feed</h2>
+  <div class="instagram">
+    <mat-card *ngFor="let post of instagramPosts" class="post" (click)="openInstagramPost(post.link)">
+      <mat-card-header>
+        <img mat-card-avatar [src]="post.user.profileImage" [alt]="post.user.username" />
+        <mat-card-title>{{ post.user.name }}</mat-card-title>
+        <mat-card-subtitle>@{{ post.user.username }}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="image" mat-card-image [style.background-image]="bgUrl(post.image)"></div>
+      <mat-card-content>
+        <div class="date">{{ formatDate(post.createdTime) }}</div>
+        {{ shortCaption(post.caption) }}
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="credit">
+    &copy; Copyright 2018 Create Cafe. All Rights Reserved.
+    <br />
+    Site designed by <a href="http://bigtreeworld.com/" target="_blank">Big Tree World</a>.
+  </div>
+</div>

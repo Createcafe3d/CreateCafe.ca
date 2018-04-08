@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule } from '@angular/material';
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 
 import { AppComponent } from './app.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
@@ -12,19 +13,22 @@ import { ProfessionalServicesComponent } from './components/professional-service
 import { MenuService } from './services/menu.service';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { ProductsComponent } from './components/products/products.component';
+import { PageFooterComponent } from './components/page-footer/page-footer.component';
+import { InstagramService } from './services/instagram.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent, PageHeaderComponent, PageIntroComponent, SideMenuComponent,
     HoursOfOperationComponent, InfoSlidersComponent, ProfessionalServicesComponent,
-    ProductsComponent
+    ProductsComponent, PageFooterComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MatTableModule, MatButtonModule,
-    MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule
+    BrowserModule, BrowserAnimationsModule, HttpClientModule, Angular2FontawesomeModule,
+    MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule
   ],
-  providers: [MenuService],
+  providers: [MenuService, InstagramService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
