@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule } from '@angular/material';
+import { MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
@@ -20,7 +20,7 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, MatTableModule, MatButtonModule,
-    MatCardModule, MatSidenavModule, MatIconModule
+    MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

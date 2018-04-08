@@ -11,20 +11,50 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: stretch;
-    .ps-section {
-      display: flex;
-      flex-flow: column nowrap;
-      flex: 1 0;
-      min-width: 320px;
-      margin: 24px;
-      .title {
-        font-size: 22px;
-        font-weight: 300;
-        margin-bottom: 1em;
-      }
-      .content {
+    mat-accordion {
+      width: 100%;
+      mat-expansion-panel {
+        width: 100%;
+        max-width: calc(100% - 16px);
+        margin: 0 auto;
+        background-color: $super-dark-grey;
+        color: $light-grey;
         font-size: 18px;
-        font-weight: 300;
+        mat-expansion-panel-header {
+          background-color: $black;
+          background-size: auto 200px;
+          background-position: right top;
+          background-repeat: no-repeat;
+          &.printing {
+            background-position: right -80px;
+            filter: hue-rotate(-180deg);
+          }
+          mat-panel-title {
+            color: $white;
+            font-size: 28px;
+            font-family: "Code Pro", sans-serif;
+          }
+          mat-panel-description {
+            color: $med-grey;
+            margin: auto;
+            font-size: 22px;
+            font-weight: 200;
+          }
+        }
+        .content {
+          text-align: center;
+          .text {
+            margin: 24px auto;
+            max-width: 800px;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 200;
+            line-height: 1.2;
+          }
+          button {
+            color: $black;
+          }
+        } 
       }
     }
   }

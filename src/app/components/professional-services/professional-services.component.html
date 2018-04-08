@@ -1,28 +1,53 @@
-<div class="professional-services">
+<div class="professional-services" id="professional-services">
+  
   <mat-card>
     <mat-card-title>
       Professional Services
     </mat-card-title>
     <mat-card-content>
-      <div class="ps-section">
-        <div class="title">3D Design (CAD Modeling)</div>
-        <div class="content">
-            Create Cafe specializes in designing for printability. Developed from several years experience in design 
-            and 3D Printing the team has the ability to model mechanical parts and free form structures with high precision 
-            able to be replicated immediately.
-        </div>
-      </div>
-      <div class="ps-section">
-        <div class="title">3D Printing (FDM / SLA)</div>
-        <div class="content">
-            Create Cafe currently has 2 printing technologies in-house: FDM and SLA. Fused Disposition Modelling (FDM) can use a variety of thermoplastics such as ABS, PLA, Nylon, and TPU to produce 3D objects between 100 - 300 Microns of accuracy. Maximum build volume for these printers are 500mm X 500mm x 500mm (19”x 19”x 19”).
-            <br /><br />
-            Stereolithography (SLA) produces very detailed and accurate objects between 20 - 100 microns using a laser and liquid resin. There are a variety of resins avaliable to use for different applications. Maximum build volume is 150mm x 150mm x 150mm (6”x 6”x 6”).            
-        </div>
-      </div>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header
+            [style.background-image]="bgImage"
+            collapsedHeight="80px" expandedHeight="100px">
+            <mat-panel-title>
+              3D Design
+            </mat-panel-title>
+            <mat-panel-description>
+              CAD Modeling
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="content">
+            <div class="text">
+              Create Cafe specializes in designing for printability. Developed from several years experience in design 
+              and 3D Printing the team has the ability to model mechanical parts and free form structures with high precision 
+              able to be replicated immediately.
+            </div>
+            <button mat-raised-button>Learn More</button>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header
+            [style.background-image]="bgImage"
+            class="printing"
+            collapsedHeight="80px" expandedHeight="100px">
+            <mat-panel-title>
+              3D Printing
+            </mat-panel-title>
+            <mat-panel-description>
+              FDM/SLA
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="content">
+            <div class="text">
+              Create Cafe currently has 2 printing technologies in-house: FDM and SLA. Fused Disposition Modelling (FDM) can use a variety of thermoplastics such as ABS, PLA, Nylon, and TPU to produce 3D objects between 100 - 300 Microns of accuracy. Maximum build volume for these printers are 500mm X 500mm x 500mm (19"x 19"x 19").
+              <br /><br />
+              Stereolithography (SLA) produces very detailed and accurate objects between 20 - 100 microns using a laser and liquid resin. There are a variety of resins avaliable to use for different applications. Maximum build volume is 150mm x 150mm x 150mm (6"x 6"x 6").
+            </div>
+            <button mat-raised-button>Learn More</button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button>Learn More</button>
-    </mat-card-actions>
   </mat-card>
 </div>

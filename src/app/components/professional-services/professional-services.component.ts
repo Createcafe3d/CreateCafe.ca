@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './professional-services.component.html',
   styleUrls: ['./professional-services.component.scss']
 })
-export class ProfessionalServicesComponent {}
+export class ProfessionalServicesComponent {
+  bgImage = 'url("./assets/images/dragon.png")';
+}

@@ -36,7 +36,11 @@ export class InfoSlidersComponent implements OnInit {
            You can also 3D Print yourself in Create Cafe with a Print Pass for the day or become a monthly member.',
         imageUrl: './assets/images/printing.jpg',
         buttons: [
-          {text: 'View Professional Services', action: () => {}},
+          {text: 'View Professional Services', action: () => {
+            document.getElementById('professional-services').scrollIntoView({
+              behavior: 'smooth',
+            });
+          }},
           {text: 'Printing Pass', action: () => {}}
         ],
         state: State.NEUTRAL,
