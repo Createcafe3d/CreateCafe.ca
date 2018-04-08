@@ -41,7 +41,11 @@ export class InfoSlidersComponent implements OnInit {
               behavior: 'smooth',
             });
           }},
-          {text: 'Printing Pass', action: () => {}}
+          {text: 'Printing Pass', action: () => {
+            document.getElementById('products-section').scrollIntoView({
+              behavior: 'smooth',
+            });
+          }}
         ],
         state: State.NEUTRAL,
         color: 'red'
@@ -53,7 +57,11 @@ export class InfoSlidersComponent implements OnInit {
            and Finishing Techniques to help make 3D Printing a part of your everyday life. View up coming classes and events below.',
         imageUrl: './assets/images/classes.jpg',
         buttons: [
-          {text: 'Classes', action: () => {}}
+          {text: 'Classes', action: () => {
+            document.getElementById('products-section').scrollIntoView({
+              behavior: 'smooth',
+            });
+          }}
         ],
         state: State.NEUTRAL,
         color: 'slate'
@@ -64,7 +72,9 @@ export class InfoSlidersComponent implements OnInit {
         text: 'Looking for a fun 3D Printing project? Our online shop has DIY Headphone kits for you.',
         imageUrl: './assets/images/shop.jpg',
         buttons: [
-          {text: 'Shop', action: () => {}}
+          {text: 'Shop', action: () => {
+            window.open('https://create-cafe-3d-printing-coffee.myshopify.com/', '_target');
+          }}
         ],
         state: State.NEUTRAL,
         color: 'green'
