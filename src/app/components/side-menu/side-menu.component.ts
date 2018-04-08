@@ -76,7 +76,7 @@ export class SideMenuComponent {
   public getPrice(price: number): Price {
     return {
       dollars: price.toFixed(0).toString(),
-      cents: (price % 1).toFixed(2).toString().substring(2);
+      cents: (price % 1).toFixed(2).toString().substring(2)
     };
   }
 }

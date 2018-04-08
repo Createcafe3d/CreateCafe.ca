@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'page-header',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class PageHeaderComponent implements OnInit {
   hasHeaderScrolled = false;
   darkenScrollHeight = 50;
+  constructor(private menuService: MenuService) {}
   ngOnInit(): void {
     window.addEventListener('scroll', () => {
         if (typeof window.pageYOffset === 'number') {
@@ -17,5 +19,8 @@ export class PageHeaderComponent implements OnInit {
   }
   get condenseHeader(): boolean {
     return this.hasHeaderScrolled;
+  }
+  toggleMenu(): void {
+    this.menuService.toggleMenu();
   }
 }
