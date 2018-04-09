@@ -1,0 +1,38 @@
+@import './../../common/partials/colors';
+
+mat-dialog-content {
+  .classes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    mat-card {
+      margin: 10px;
+      width: 300px;
+      display: flex;
+      flex-flow: column nowrap;
+      img {
+        margin-top: -12px;
+        height: 125px;
+      }
+      mat-card-title {
+        background-color: $primary-color;
+        color: $white;
+        margin: -24px -24px 10px;
+        padding: 12px;
+        font-size: 18px;
+      }
+      mat-card-content {
+        text-align: left;
+        flex-grow: 1;
+      }
+      mat-card-actions {
+        text-align: center;
+        button {
+          background-color: $primary-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}

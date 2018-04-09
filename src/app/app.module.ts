@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule } from '@angular/material';
+import { MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule,
+  MatIconModule, MatExpansionModule, MatDialogModule } from '@angular/material';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 
 import { AppComponent } from './app.component';
@@ -16,19 +17,22 @@ import { ProductsComponent } from './components/products/products.component';
 import { PageFooterComponent } from './components/page-footer/page-footer.component';
 import { InstagramService } from './services/instagram.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ClassesDialogComponent } from './components/classes/classes-dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, PageHeaderComponent, PageIntroComponent, SideMenuComponent,
     HoursOfOperationComponent, InfoSlidersComponent, ProfessionalServicesComponent,
-    ProductsComponent, PageFooterComponent
+    ProductsComponent, PageFooterComponent, ClassesDialogComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, HttpClientModule, Angular2FontawesomeModule,
-    MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule
+    MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule,
+    MatDialogModule
   ],
   providers: [MenuService, InstagramService],
+  entryComponents: [ClassesDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

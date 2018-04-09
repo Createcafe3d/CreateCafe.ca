@@ -19,12 +19,15 @@
       max-width: 500px;
       width: 25%;
       min-width: 300px;
+      display: flex;
+      flex-flow: column nowrap;
       mat-card-title {
         text-align: center;
         color: $primary-color;
         font-weight: 200;
       }
       mat-card-content {
+        flex-grow: 1;
         .icon {
           margin: 20px auto;
           background-color: $light-grey;
