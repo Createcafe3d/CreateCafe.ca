@@ -1,12 +1,13 @@
 <mat-table [dataSource]="hours">
 
-  <ng-container *ngFor="let column of displayedColumns">
+  <ng-container *ngFor="let column of displayedColumns; let i = index">
     <ng-container [matColumnDef]="column">
       <mat-header-cell *matHeaderCellDef [ngClass]="{'today': isToday(column)}">
         {{ displayDay[column] }}
       </mat-header-cell>
       <mat-cell *matCellDef="let element: HooRow" [ngClass]="{'today': isToday(column)}">
         {{ element[column] }}
+        <div class="ampm" *ngIf="i > 0">{{ element.ampm }}</div>
       </mat-cell>
     </ng-container>
   </ng-container>

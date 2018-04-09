@@ -32,23 +32,25 @@ export class HoursOfOperationComponent {
   HOURS_OF_OPERATION = [
     {
       category: 'Open',
-      sunday: '11:00 AM',
-      monday: '8:00 AM',
-      tuesday: '8:00 AM',
-      wednesday: '8:00 AM',
-      thursday: '8:00 AM',
-      friday: '8:00 AM',
-      saturday: '11:00 AM',
+      sunday: '11',
+      monday: '8',
+      tuesday: '8',
+      wednesday: '8',
+      thursday: '8',
+      friday: '8',
+      saturday: '11',
+      ampm: 'am'
     },
     {
       category: 'Close',
-      sunday: '5:00 PM',
-      monday: '6:00 PM',
-      tuesday: '6:00 PM',
-      wednesday: '6:00 PM',
-      thursday: '6:00 PM',
-      friday: '6:00 PM',
-      saturday: '5:00 PM',
+      sunday: '5',
+      monday: '6',
+      tuesday: '6',
+      wednesday: '6',
+      thursday: '6',
+      friday: '6',
+      saturday: '5',
+      ampm: 'pm'
     }
   ];
 
@@ -68,4 +70,5 @@ interface HooRow {
   thursday: string;
   friday: string;
   saturday: string;
+  ampm: string;
 }
