@@ -9,7 +9,7 @@ import { MatSidenav } from '@angular/material';
   styleUrls: ['./info-sliders.component.scss']
 })
 export class InfoSlidersComponent implements OnInit {
-  private sections: Section[];
+  sections: Section[];
 
   constructor(private menu: MenuService) {}
 
