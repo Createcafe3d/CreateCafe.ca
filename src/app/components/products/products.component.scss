@@ -47,6 +47,13 @@
             color: $primary-color;
           }
         }
+        .hl {
+          color: $primary-color-dark;
+          font-size: 16px;
+          font-weight: 200;
+          text-align: center;
+          margin: 24px;
+        }
       }
       mat-card-actions {
         text-align: center;
