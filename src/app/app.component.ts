@@ -8,9 +8,11 @@ import { MenuService } from './services/menu.service';
 })
 export class AppComponent implements OnInit {
   @ViewChild('sideMenu') private sideMenu;
+  @ViewChild('navigation') private navMenu;
   constructor(private menu: MenuService) {}
 
   ngOnInit(): void {
     this.menu.sideMenu = this.sideMenu;
+    this.menu.navMenu = this.navMenu;
   }
 }

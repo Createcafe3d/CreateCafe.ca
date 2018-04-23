@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule,
-  MatIconModule, MatExpansionModule, MatDialogModule, MatToolbarModule } from '@angular/material';
+  MatIconModule, MatExpansionModule, MatDialogModule, MatToolbarModule, MatListModule } from '@angular/material';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 
 import { AppComponent } from './app.component';
@@ -21,18 +21,20 @@ import { ClassesDialogComponent } from './components/classes/classes-dialog.comp
 import { BookingCalendarComponent } from './components/booking-calendar/booking-calendar.component';
 import { GoogleCalendarService } from './services/google-calendar.service';
 import { CalendarModule } from 'angular-calendar';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, PageHeaderComponent, PageIntroComponent, SideMenuComponent,
     HoursOfOperationComponent, InfoSlidersComponent, ProfessionalServicesComponent,
-    ProductsComponent, PageFooterComponent, ClassesDialogComponent, BookingCalendarComponent
+    ProductsComponent, PageFooterComponent, ClassesDialogComponent, BookingCalendarComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, HttpClientModule, Angular2FontawesomeModule,
     MatTableModule, MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule, MatExpansionModule,
-    MatDialogModule, MatToolbarModule, CalendarModule.forRoot()
+    MatDialogModule, MatToolbarModule, MatListModule, CalendarModule.forRoot()
   ],
   providers: [MenuService, InstagramService, GoogleCalendarService],
   entryComponents: [ClassesDialogComponent],

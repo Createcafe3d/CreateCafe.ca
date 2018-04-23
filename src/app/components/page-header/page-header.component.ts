@@ -23,4 +23,7 @@ export class PageHeaderComponent implements OnInit {
   toggleMenu(): void {
     this.menuService.toggleMenu();
   }
+  toggleNav(): void {
+    this.menuService.toggleNav();
+  }
 }

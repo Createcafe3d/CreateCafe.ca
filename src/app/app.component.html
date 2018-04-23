@@ -1,8 +1,10 @@
 <mat-sidenav-container>
-    <mat-sidenav #sideMenu mode="over">
-      <side-menu></side-menu>
-    </mat-sidenav>
-    <mat-sidenav-content>
+  <mat-sidenav-content>
+    <mat-sidenav-container>
+      <mat-sidenav #sideMenu mode="over">
+        <side-menu></side-menu>
+      </mat-sidenav>
+      <mat-sidenav-content>
         <div class="page-wrapper">
           <page-header></page-header>
           <page-intro></page-intro>
@@ -13,5 +15,10 @@
           <professional-services></professional-services>
           <page-footer></page-footer>
         </div>
-    </mat-sidenav-content>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </mat-sidenav-content>
+  <mat-sidenav #navigation mode="over" position="end">
+    <nav-menu></nav-menu>
+  </mat-sidenav>
 </mat-sidenav-container>
