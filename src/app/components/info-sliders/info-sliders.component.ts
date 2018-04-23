@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { MenuService } from '../../services/menu.service';
 import { MatSidenav } from '@angular/material';
+import { GoogleCalendarService } from '../../services/google-calendar.service';
 
 @Component({
   selector: 'info-sliders',
@@ -11,7 +12,7 @@ import { MatSidenav } from '@angular/material';
 export class InfoSlidersComponent implements OnInit {
   sections: Section[];
 
-  constructor(private menu: MenuService) {}
+  constructor(private menu: MenuService, private gCal: GoogleCalendarService) {}
 
   ngOnInit(): void {
     this.sections = [
@@ -58,7 +59,8 @@ export class InfoSlidersComponent implements OnInit {
         imageUrl: './assets/images/classes.jpg',
         buttons: [
           {text: 'Classes', action: () => {
-            document.getElementById('products-section').scrollIntoView({
+            this.gCal.changeCalendarVisibility(true);
+            document.getElementById('event-calendar').scrollIntoView({
               behavior: 'smooth',
             });
           }}

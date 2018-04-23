@@ -13,6 +13,8 @@ export class GoogleCalendarService {
   startDate: Date = this.startOfMonth(new Date());
   endDate: Date = this.endOfMonth(new Date());
 
+  showCalendar = false;
+
   constructor(private http: HttpClient) {}
 
   get events$(): Observable<CalendarEvent[]> {
@@ -28,7 +30,7 @@ export class GoogleCalendarService {
     if (this.endDate) {
       url += '&timeMax=' + this.endDate.toISOString();
     }
-    const httpCall = this.http.get(url)
+    const httpCall = this.http.get(url);
     httpCall.subscribe((response: {items: GoogleCalendarEvent[]}) => {
       const newEvents = [];
       response.items.forEach((item) => {
@@ -77,6 +79,10 @@ export class GoogleCalendarService {
     this.startDate.setMonth(this.startDate.getMonth() + 1);
     this.endDate.setMonth(this.endDate.getMonth() + 1);
     return this.fetchEvents();
+  }
+
+  changeCalendarVisibility(show?: boolean) {
+    this.showCalendar = show || !this.showCalendar;
   }
 }
 

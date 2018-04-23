@@ -1,6 +1,6 @@
 import { Component, OnInit, Sanitizer } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { GoogleCalendarService } from '../services/google-calendar.service';
+import { GoogleCalendarService } from '../../services/google-calendar.service';
 import { CalendarEvent } from 'angular-calendar';
 import { Observable } from 'rxjs/Observable';
 
@@ -10,8 +10,6 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./booking-calendar.component.scss']
 })
 export class BookingCalendarComponent implements OnInit {
-  showCalendar = false;
-
   constructor(private sanitizer: DomSanitizer, private gCalendar: GoogleCalendarService) {}
 
   ngOnInit() {
@@ -22,12 +20,16 @@ export class BookingCalendarComponent implements OnInit {
     return this.gCalendar.events$;
   }
 
+  get showCalendar(): boolean {
+    return this.gCalendar.showCalendar;
+  }
+
   get viewDate(): Date {
     return this.gCalendar.startDate;
   }
 
   toggleShowCalendar(): void {
-    this.showCalendar = !this.showCalendar;
+    this.gCalendar.changeCalendarVisibility();
   }
 
   prevMonth(): void {

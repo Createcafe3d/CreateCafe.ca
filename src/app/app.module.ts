@@ -18,7 +18,7 @@ import { PageFooterComponent } from './components/page-footer/page-footer.compon
 import { InstagramService } from './services/instagram.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ClassesDialogComponent } from './components/classes/classes-dialog.component';
-import { BookingCalendarComponent } from './booking-calendar/booking-calendar.component';
+import { BookingCalendarComponent } from './components/booking-calendar/booking-calendar.component';
 import { GoogleCalendarService } from './services/google-calendar.service';
 import { CalendarModule } from 'angular-calendar';
 
