@@ -88,6 +88,14 @@ export class InfoSlidersComponent implements OnInit {
     this.sections.map(section => {
       section.state = section.id === id ? State.EXPANDED : State.COLLAPSED;
     });
+    const section0 = document.getElementById('section-0');
+    const section1 = document.getElementById('section-1');
+    const height = section0.clientHeight > section1.clientHeight ? section1.clientHeight : section0.clientHeight;
+    const offset = height === 100 ? height * id : 0;
+    window.scrollTo({
+      top: section0.offsetTop - 50 + offset,
+      behavior: 'smooth'
+    });
   }
 
   unExpandSections(): void {

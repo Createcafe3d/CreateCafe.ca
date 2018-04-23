@@ -1,5 +1,6 @@
 <div class="intro-sliders">
   <div *ngFor="let section of sections" class="section"
+    [id]="'section-' + section.id"
     [ngClass]="{
       'expanded': isExpanded(section.state),
       'collapsed': isCollapsed(section.state)
@@ -15,14 +16,14 @@
         {{ section.text }}
       </div>
       <div class="button">
-        <button mat-raised-button 
+        <button mat-raised-button
           *ngFor="let button of section.buttons"
           (click)="button.action()">
           {{ button.text }}
         </button>
       </div>
     </div>
-    <div 
+    <div
       class="color-shade"
       [ngClass]="section.color"
       (click)="toggleExpand(section)"
