@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Classes and Events Schedule</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-button (click)="toggleShowCalendar()">{{ buttonText }}</button>
+    <div class="booking-calendar" [ngClass]="{'collapsed': !showCalendar}">
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <button mat-icon-button (click)="prevMonth()"><mat-icon>arrow_left</mat-icon></button>
+          <span>{{ currentView }}</span>
+          <button mat-icon-button (click)="nextMonth()"><mat-icon>arrow_right</mat-icon></button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <mwl-calendar-month-view
+        [viewDate]="viewDate"
+        [events]="events$ | async"
+        [cellTemplate]="monthCellTemplate"
+      >
+      </mwl-calendar-month-view>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<ng-template #monthCellTemplate let-day="day" let-locale="locale">
+  <div>
+    <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
+  </div>
+  <div class="events">
+    <mat-card *ngFor="let event of day.events">
+      <mat-card-header>
+        <mat-card-title>{{ event.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content *ngIf="event.meta && event.meta.description">
+        <span [innerHTML]="event.meta.description"></span>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button
+          *ngIf="event.actions.length > 0"
+          (click)="event.actions[0].onClick.call()">{{ event.actions[0].label }}</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ng-template>
