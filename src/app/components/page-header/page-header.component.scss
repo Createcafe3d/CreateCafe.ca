@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.3);
-  transition: background-color 0.5s ease-in-out, 
+  transition: background-color 0.5s ease-in-out,
     border 0.5s ease-in-out,
     color 0.5s ease-in-out,
     height 0.5s ease-in-out;
@@ -20,25 +20,39 @@
   color: $white;
   .logo {
     .logo-text {
-      font-family: "Code Pro Light";
+      font-family: "Code Pro Light", sans-serif;
       text-transform: uppercase;
-      font-size: 42pt;
       text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.9);
-      transition: font-size 0.5s ease-in-out,
-        text-shadow 0.5s ease-in-out;
-      b {
-        font-family: "Code Pro";
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      .title {
+        transition: font-size 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+        font-size: 36pt;
+        b {
+          font-family: "Code Pro", sans-serif;
+        }
+      }
+      .subtitle {
+        font-family: "Code Pro", sans-serif;
+        transition: font-size 0.5s ease-in-out,
+         text-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
+        color: $white;
+        font-size:18.5pt;
+        margin-top: -6px;
+        font-weight: 700;
       }
     }
   }
   .icon {
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
     transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
     margin-left: 10px;
     img {
       margin-left: 12px;
-      width: 32px;
+      width: 42px;
       height: auto;
       filter: invert(95%);
       opacity: 1;
@@ -57,8 +71,14 @@
     height: 50px;
     .logo {
       .logo-text {
-        font-size: 24pt;
         text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        .title {
+          font-size: 22pt;
+        }
+        .subtitle {
+          font-size: 11.5pt;
+          color: $primary-color;
+        }
       }
     }
     .icon {
